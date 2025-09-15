@@ -99,16 +99,6 @@ export default function Footer() {
                   </div>
                 ))}
               </div>
-
-              {/* Tagline */}
-              <div className="mt-8 pt-6 border-t border-stone-700/50">
-                <p className="text-center text-lg text-stone-400">
-                  Ready to start your next project?{" "}
-                  <span className="bg-gradient-to-r from-stone-400 to-stone-400 bg-clip-text text-transparent font-semibold">
-                    Let&apos;s create something amazing together.
-                  </span>
-                </p>
-              </div>
             </div>
           </div>
         </div>
