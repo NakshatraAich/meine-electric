@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Mail, MapPin, Phone, Twitter, Linkedin, Github } from "lucide-react";
+import Image from "next/image";
 
 const contactItems = [
   {
@@ -52,10 +53,12 @@ export default function Footer() {
           {/* Logo & Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
-              <img
+              <Image
                 src="/logo-white.svg"
                 alt="Meine Electric Logo"
-                className="w-36 h-auto mr-4"
+                width={144} // example size
+                height={48} 
+                className="mr-4"
               />
 
             </div>
@@ -102,7 +105,7 @@ export default function Footer() {
                 <p className="text-center text-lg text-stone-400">
                   Ready to start your next project?{" "}
                   <span className="bg-gradient-to-r from-stone-400 to-stone-400 bg-clip-text text-transparent font-semibold">
-                    Let's create something amazing together.
+                    Let&apos;s create something amazing together.
                   </span>
                 </p>
               </div>
