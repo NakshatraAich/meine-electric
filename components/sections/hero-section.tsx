@@ -62,7 +62,14 @@ export function HeroSection() {
             className="flex flex-col gap-3 items-center justify-center mb-8"
           >
             <div className="p-[1px] w-8 bg-stone-200 rounded-full"></div>
-            <button className="shadow-lg text-white px-4 pb-2 pt-2 w-fit rounded-lg font-semibold bg-meine-electric text-sm tracking-wider">
+            <button 
+              onClick={() => {
+                const el = document.getElementById('contact');
+                if (el) {
+                  el.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="shadow-lg text-white px-4 pb-2 pt-2 w-fit rounded-lg font-semibold bg-meine-electric text-sm tracking-wider">
               Learn More
             </button>
           </motion.div>
