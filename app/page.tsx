@@ -4,7 +4,7 @@ import { RecognitionSection } from '@/components/sections/recognition-section'
 import { NewsSection } from '@/components/sections/news-section'
 import { TechnologySection } from '@/components/sections/technology-section'
 import { TwoColumnSection } from '@/components/sections/two-column-section'
-import { Footer } from '@/components/layout/footer'
+import Footer from '@/components/layout/footer'
 import { siteImages } from '@/lib/images-config'
 
 export default function Home() {
