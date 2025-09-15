@@ -1,0 +1,12 @@
+/* DM Sans Variable Font */
+@font-face {
+  font-family: 'DM Sans';
+  src: url('/fonts/DMSans-VariableFont_opsz,wght.ttf') format('ttf');
+  font-weight: 100 900; /* Variable weight range */
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-dmsans {
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+}

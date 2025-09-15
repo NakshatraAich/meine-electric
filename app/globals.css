@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 100%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 72 79% 54%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 0%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Basiersquarrow', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  h1 {
+    @apply text-h1-mobile md:text-h1-tablet lg:text-h1-desktop font-semibold leading-tight;
+  }
+  
+  h2 {
+    @apply text-h2-mobile md:text-h2-tablet lg:text-h2-desktop font-semibold leading-tight;
+  }
+  
+  h3 {
+    @apply text-h3-mobile md:text-h3-tablet font-medium leading-snug;
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .container-padding {
+    @apply px-5 md:px-10 lg:px-16 xl:px-20;
+  }
+  
+  .section-spacing {
+    @apply py-14 md:py-20 lg:py-24;
+  }
+  
+  .tap-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+}
