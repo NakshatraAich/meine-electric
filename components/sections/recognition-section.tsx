@@ -2,94 +2,84 @@
 
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
-import { motion } from 'framer-motion'
+import { motion, useAnimation } from 'framer-motion'
+import { useEffect } from 'react'
 
 const partners = [
-  { name: 'AIC', logo: '/logos/aic.png' },
-  { name: 'ARAI', logo: '/logos/arai.png' },
-  { name: 'Grad Capital', logo: '/logos/grad.png' },
-  { name: 'Greenr', logo: '/logos/greenr.png' },
-  { name: 'HDFC', logo: '/logos/hdfc.jpeg' },
-  { name: 'Irena', logo: '/logos/irena.png' },
-  { name: 'PIEDS', logo: '/logos/PIEDS.png' },
-  { name: 'SPTBI', logo: '/logos/sptbi.png' },
-  { name: 'Niti Aayog', logo: '/logos/niti.png' },
-  { name: 'Nidhi Prayas', logo: '/logos/nidhi.png' },
-  { name: 'Venture Catalysts', logo: '/logos/vc.png' },
+  { name: 'Irena', logo: '/logos/irena.png', size: 160 },
+  { name: 'BITS Pilani', logo: '/logos/bits.svg', size: 100 },
+  { name: 'Climate Collective', logo: '/logos/climate.webp', size: 160 },
+  { name: 'Shell', logo: '/logos/shell.png', size: 170 },
+  { name: 'Nasscom', logo: '/logos/nasscom.svg', size: 160 },
+  { name: 'Baker Hughes', logo: '/logos/baker.png', size: 180 },
+  { name: 'ARAI', logo: '/logos/arai.png', size: 160 },
+  { name: 'SPTBI', logo: '/logos/sptbi.png', size: 160 },
+  { name: 'Anna University', logo: '/logos/anna.svg', size: 100 },
+  { name: 'Technoserve', logo: '/logos/technoserve.png', size: 160 },
+  { name: 'Niti Aayog', logo: '/logos/niti.png', size: 100 },
+  { name: 'Dept. of Science and Tech.', logo: '/logos/dst.svg', size: 160 },
+
+  // duplicate for infinite scroll
+  { name: 'Irena', logo: '/logos/irena.png', size: 160 },
+  { name: 'BITS Pilani', logo: '/logos/bits.svg', size: 120 },
+  { name: 'Climate Collective', logo: '/logos/climate.webp', size: 160 },
+  { name: 'Shell', logo: '/logos/shell.png', size: 170 },
+  { name: 'Nasscom', logo: '/logos/nasscom.svg', size: 160 },
+  { name: 'Baker Hughes', logo: '/logos/baker.png', size: 160 },
+  { name: 'ARAI', logo: '/logos/arai.png', size: 160 },
+  { name: 'SPTBI', logo: '/logos/sptbi.png', size: 160 },
+  { name: 'Anna University', logo: '/logos/anna.svg', size: 120 },
+  { name: 'Technoserve', logo: '/logos/technoserve.png', size: 160 },
+  { name: 'Niti Aayog', logo: '/logos/niti.png', size: 120 },
+  { name: 'Dept. of Science and Tech.', logo: '/logos/dst.svg', size: 160 },
 ]
 
-// Parent container
-const containerVariants = {
-  hidden: { opacity: 1 }, // keep container visible so only children animate
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.05,
-      delayChildren: 0.2,
-    },
-  },
-}
-
-// Card animation (fade + rise together)
-const cardVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { duration: 0.6, ease: 'easeOut' }, // both run in same duration
-  },
-}
-
 export function RecognitionSection() {
-  return (
-    <section className="section-spacing bg-gray-50 lg:mx-28">
-      <div className="container-padding">
-        {/* Header */}
-        <div className="text-center mb-12 flex flex-col items-center">
-          <p className="text-white px-4 pb-2 pt-2 w-fit rounded-lg font-semibold bg-meine-electric text-sm tracking-wider mb-4">
-            Recognition & Partners
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 lg:max-w-3xl">
-            Recognized and supported by leading technology and climate initiatives
-          </h2>
-          <p className="text-gray-600 max-w-2xl text-lg mx-auto lg:max-w-xl">
-            In collaboration with energy and climate initiatives, we&apos;re driving solutions that power a cleaner tomorrow.
-          </p>
-        </div>
+  const controls = useAnimation()
 
-        {/* Partner Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8"
-        >
-          {partners.map((partner) => (
-            <motion.div
-              key={partner.name}
-              variants={cardVariants}
+  useEffect(() => {
+    controls.start({
+      x: ['0%', '-485%'],
+      transition: { x: { repeat: Infinity, repeatType: 'loop', duration: 35, ease: 'linear' } },
+    })
+  }, [controls])
+
+  return (
+    <div className="w-full mt-6">
+      <p className="text-stone-800 text-sm sm:text-base lg:text-lg font-semibold text-center">
+        Supported By
+      </p>
+
+      {/* Scroller */}
+      <div className="relative overflow-hidden">
+        <motion.div animate={controls} className="flex gap-6 md:gap-8">
+          {partners.map((partner, index) => (
+            <div
+              key={`${partner.name}-${index}`}
               className={cn(
-                'relative bg-white border border-gray-200 rounded-lg flex items-center justify-center p-4 cursor-pointer overflow-hidden group',
+                'relative flex-shrink-0 flex items-center justify-center p-4 cursor-pointer group',
                 'transition-transform duration-300 hover:scale-105'
               )}
+              style={{ width: 145, height: 145 }}
             >
-              {/* Partner Logo */}
               <Image
                 src={partner.logo}
                 alt={partner.name}
-                width={130}
-                height={130}
-                className="object-contain z-10 aspect-square"
+                width={partner.size}
+                height={partner.size}
+                className="object-contain"
               />
-
-              {/* Overlay Title */}
-              <div className="absolute bottom-0 left-0 w-full bg-white bg-opacity-90 py-2 text-center text-sm font-semibold text-gray-700 z-20 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+              <div className="absolute bottom-0 left-0 w-full bg-opacity-90 py-1 text-center text-xs sm:text-sm font-semibold text-gray-700 z-20 opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                 {partner.name}
               </div>
-            </motion.div>
+            </div>
           ))}
         </motion.div>
+
+        {/* Gradient overlays */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-12 sm:w-12 bg-gradient-to-r from-white to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-12 sm:w-12 bg-gradient-to-l from-white to-transparent" />
       </div>
-    </section>
+    </div>
   )
 }

@@ -64,6 +64,10 @@
   .container-padding {
     @apply px-5 md:px-10 lg:px-16 xl:px-20;
   }
+
+  .container-left {
+    @apply pl-5 md:pl-10 lg:pl-16 xl:pl-20;
+  }
   
   .section-spacing {
     @apply py-14 md:py-20 lg:py-24;

@@ -106,7 +106,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-16 flex flex-col items-center justify-between space-y-4 border-t border-stone-700/50 pt-8 md:flex-row md:space-y-0">
           <p className="text-sm text-stone-400">
-            © 2024 Meine Electric. All rights reserved.
+            © 2025 Meine Electric. All rights reserved.
           </p>
         </div>
       </div>

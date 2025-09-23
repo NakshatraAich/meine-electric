@@ -1,72 +1,92 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import { motion, useScroll, useTransform, useMotionValue, useSpring } from 'framer-motion'
-import { siteImages } from '@/lib/images-config'
+import { motion, useSpring, AnimatePresence } from 'framer-motion'
+import { Menu, X } from 'lucide-react'
 
 export function Header() {
-  const { scrollY } = useScroll()
-  const lastScrollY = useMotionValue(0)
-  const scrollDirection = useMotionValue(0)
-  
-  // Spring configuration for ultra-smooth animation
-  const springConfig = { stiffness: 300, damping: 30, mass: 0.8 }
-  const headerY = useSpring(0, springConfig)
+  const [scrollY, setScrollY] = useState(0)
+  const [direction, setDirection] = useState<'up' | 'down'>('up')
+  const [menuOpen, setMenuOpen] = useState(false)
+  const y = useSpring(0, { stiffness: 300, damping: 50 })
 
   useEffect(() => {
-    const unsubscribe = scrollY.on('change', (current) => {
-      const previous = lastScrollY.get()
-      const halfPageHeight = document.documentElement.scrollHeight / 2
-      const isScrollingDown = current > previous
-      const isPastHalfway = current > halfPageHeight
-      
-      // Update scroll direction
-      scrollDirection.set(isScrollingDown ? 1 : -1)
-      
-      // Determine if header should be hidden
-      if (isPastHalfway && isScrollingDown) {
-        headerY.set(-100)
-      } else if (!isPastHalfway || !isScrollingDown) {
-        headerY.set(0)
-      }
-      
-      lastScrollY.set(current)
-    })
+    let lastScrollY = window.scrollY
 
-    return () => unsubscribe()
-  }, [scrollY, lastScrollY, scrollDirection, headerY])
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      const delta = currentScrollY - lastScrollY
 
-  // Add opacity transform based on scroll position
-  const headerOpacity = useTransform(
-    scrollY,
-    [0, 100],
-    [1, 0.97]
-  )
+      if (Math.abs(delta) < 50) return
+      setDirection(delta > 0 ? 'down' : 'up')
+      lastScrollY = currentScrollY
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    y.set(direction === 'down' ? -150 : 0)
+  }, [direction, y])
+
+  const menuVariants = {
+    hidden: { opacity: 0, height: 0 },
+    visible: { opacity: 1, height: 'auto', transition: { duration: 0.3, ease: 'easeOut' } },
+  }
 
   return (
-    <motion.header 
-      style={{ 
-        y: headerY,
-        opacity: headerOpacity
-      }}
-      className="fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-lg"
+    <motion.header
+      style={{ y }}
+      className="fixed top-0 left-0 w-full z-30 flex justify-center lg:justify-start px-2 md:px-10 lg:px-12 xl:px-14"
     >
-      <div className="container-padding">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Image
-              src={siteImages.logo}
-              alt="Maine Electric"
-              width={140}
-              height={32}
-              className="h-8 sm:h-8 md:h-12 w-auto"
-              priority
-            />
-          </div>
+      <div className="flex items-center justify-between lg:justify-start lg:w-fit lg:gap-20 w-full max-w-[1500px] bg-white shadow-lg my-5 px-6 py-1 rounded-sm">
+        {/* Logo */}
+        <div className="relative w-[10rem] lg:w-[14rem] h-20 mx-0">
+          <Image
+            src="/logo.svg"
+            alt="Meine Electric Logo"
+            fill
+            className="object-contain"
+          />
         </div>
+
+        {/* Desktop Nav */}
+        <nav className="hidden lg:flex gap-6 text-sm font-semibold text-[#222222] ml-auto">
+          <button>Home</button>
+          <button>About</button>
+          <button>Contact</button>
+        </nav>
+
+        {/* Mobile Hamburger */}
+        <button
+          className="lg:hidden ml-auto"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <X className="w-6 h-6 text-gray-800" /> : <Menu className="w-6 h-6 text-gray-800" />}
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            key="mobile-menu"
+            variants={menuVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            className="lg:hidden absolute top-full left-0 w-full bg-white shadow-lg z-20 overflow-hidden"
+          >
+            <div className="flex flex-col gap-4 px-6 py-4 text-sm font-semibold text-[#222222]">
+              <button onClick={() => setMenuOpen(false)}>Home</button>
+              <button onClick={() => setMenuOpen(false)}>About</button>
+              <button onClick={() => setMenuOpen(false)}>Contact</button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   )
 }
