@@ -23,7 +23,7 @@ export function CompanyIntroduction() {
             About <span className='text-meine-electric'>Meine Electric</span>
           </h2>
           <p className="max-w-lg text-gray-600 text-lg mb-2 font-semibold">
-            &quot;We are building energy infrastructure of tomorrow - innovative, sustainable, and resilient.&quot;
+            We are building energy infrastructure of tomorrow - innovative, sustainable, and resilient.
           </p>
           <p className="max-w-lg text-gray-600 text-lg mb-2">
             At Meine Electric, our passionate team of engineers, creators, and visionaries is united by a shared purpose: to transform the way energy is generated, stored, and delivered. 
