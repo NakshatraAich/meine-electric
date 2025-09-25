@@ -10,7 +10,7 @@ import { WhyIronair } from '@/components/sections/why-ironair'
 
 export default function Home() {
   return (
-    <>
+    <div>
       {/* Hero Section with Navigation Bar */}
       <HeroSection />
       
@@ -31,6 +31,6 @@ export default function Home() {
       <NewsSection />    
       
       <Footer />
-    </>
+    </div>
   )
 }

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 export function CompanyIntroduction() {
   return (
     <section className="section-spacing bg-white pt-20 md:pt-24">
-      <div className="container-padding flex flex-col gap-12 lg:gap-16 lg:flex-row items-start">
+      <div className="container-padding flex flex-col  gap-12 lg:gap-36 lg:flex-row items-start">
         
         {/* Left Content */}
         <motion.div
@@ -42,7 +42,7 @@ export function CompanyIntroduction() {
         >
           <div className="relative col-span-2 rounded-sm overflow-hidden">
             <Image
-              src="/images/introduction-image.jpg"
+              src="/images/comp1.jpeg"
               alt="Collage image 1"
               fill
               className="object-cover"
@@ -51,7 +51,7 @@ export function CompanyIntroduction() {
 
           <div className="relative col-span-1 rounded-sm overflow-hidden">
             <Image
-              src="/images/introduction-image.jpg"
+              src="/images/comp2.webp"
               alt="Collage image 2"
               fill
               className="object-cover"
@@ -60,7 +60,7 @@ export function CompanyIntroduction() {
 
           <div className="relative col-span-1 rounded-sm overflow-hidden">
             <Image
-              src="/images/introduction-image.jpg"
+              src="/images/comp3.jpeg"
               alt="Collage image 3"
               fill
               className="object-cover"
@@ -69,7 +69,7 @@ export function CompanyIntroduction() {
 
           <div className="relative col-span-2 rounded-sm overflow-hidden">
             <Image
-              src="/images/introduction-image.jpg"
+              src="/images/comp4.jpeg"
               alt="Collage image 4"
               fill
               className="object-cover"

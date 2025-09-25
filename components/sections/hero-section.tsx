@@ -44,10 +44,10 @@ export function HeroSection() {
         </motion.div>
 
         {/* Right Image */}
-        <div className="w-full lg:w-4/5 flex-shrink-0">
+        <div className="w-full lg:w-2/3 flex-shrink-0">
 
           {/* Small & Medium screens: aspect ratio 3:4 */}
-          <div className="lg:hidden w-full aspect-[3/4] overflow-hidden rounded-lg">
+          <div className="lg:hidden w-full aspect-[3/4] overflow-hidden">
             <img
               src="/images/hero-background.png"
               alt="Scalable Energy"
@@ -56,12 +56,15 @@ export function HeroSection() {
           </div>
 
           {/* Large screens: full width, fixed height */}
-          <div className="hidden lg:block w-full h-dvh overflow-hidden rounded-lg">
+          <div className="relative hidden lg:block w-full h-dvh overflow-hidden rounded-bl-xl -ml-16">
             <img
-              src="/images/gradient-hero.png"
+              src="/images/hero-background.png"
               alt="Scalable Energy"
               className="w-full h-full object-cover object-left"
             />
+
+            {/* Gradient overlay */}
+            <div className="absolute -left-1 -ml-1 inset-0 bg-gradient-to-r from-white via-transparent to-transparent"></div>
           </div>
         </div>
       </div>
