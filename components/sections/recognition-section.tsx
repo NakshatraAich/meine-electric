@@ -58,11 +58,13 @@ export function RecognitionSection() {
                 'relative flex-shrink-0 flex items-center justify-center cursor-pointer group transition-transform duration-300 hover:scale-105',
                 'w-[var(--sm)] h-[var(--sm)] md:w-[var(--md)] md:h-[var(--md)] lg:w-[var(--lg)] lg:h-[var(--lg)]'
               )}
-              style={{
-                '--sm': `${partner.size.sm}px`,
-                '--md': `${partner.size.md}px`,
-                '--lg': `${partner.size.lg}px`,
-              } as any}
+                style={
+                  {
+                    '--sm-size': `${partner.size.sm}px`,
+                    '--md-size': `${partner.size.md}px`,
+                    '--lg-size': `${partner.size.lg}px`,
+                  } as React.CSSProperties
+                }
             >
               <Image
                 src={partner.logo}
