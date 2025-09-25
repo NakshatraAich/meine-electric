@@ -55,7 +55,7 @@ export function HeroSection() {
             />
 
             {/* Gradient overlay */}
-            <div className="absolute bottom-0 inset-x-0 bg-gradient-to-b from-transparent via-white/10 to-white"></div>
+            <div className="absolute -bottom-1 inset-0 bg-gradient-to-b from-transparent via-white/10 to-white overflow-hidden"></div>
           </div>
 
           {/* Large screens: full width, fixed height */}
