@@ -1,112 +1,77 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
 const steps = [
-  { 
-    text: "Iron, one of the most abundant and sustainable metals on Earth, forms the foundation of our breakthrough energy technology. By starting with a simple, natural material, we unlock scalable and eco-friendly power solutions.", 
-    img: "/images/dri.jpg" 
-  },
-  { 
-    text: "Reliable power for everyday needs from homes to industries. Our system ensures a consistent and clean energy supply, helping reduce dependence on fossil fuels while supporting a greener future.", 
-    img: "/images/transformer.jpg" 
-  },
-  { 
-    text: "As the battery discharges, pure iron naturally transforms into rust. This simple yet powerful reaction drives the flow of energy, making the process both efficient and environmentally responsible.", 
-    img: "/images/rust.jpeg" 
-  },
-  { 
-    text: "When it's time to recharge, our proprietary system rapidly converts rust back into usable iron. This closed-loop cycle enables quick, efficient, and sustainable recharging - ready to power the next cycle of clean energy (Image is only for representational purpose)", 
-    img: "/images/recharge.jpg" 
-  },
+  { text: "During discharge, iron reacts with oxygen to form rust — a simple, natural reaction that releases stored energy.", top: '0%', left: '0%' },
+  { text: "When recharged, the rust is converted back into pure iron through our proprietary method.", top: '25%', right: '-10%' },
+  { text: "This reversible cycle enables a sustainable, low-cost solution to power widespread future energy systems.", top: '80%', left: '0%' },
 ]
 
 export function TechnologySection() {
-  const [activeIndex, setActiveIndex] = useState(0)
+  const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % steps.length)
-    }, 7000)
-    return () => clearInterval(interval)
+    if (videoRef.current) videoRef.current.playbackRate = 1
   }, [])
 
   return (
-    <section className='container-padding'>
-      <div className="text-left mb-8 flex flex-col items-start">
+    <section className="container-padding xl:mx-12 pt-20 md:pt-24">
+      <div className="text-center mb-12 flex flex-col items-center">
         <p className="text-white px-4 pb-2 pt-2 w-fit rounded-lg font-semibold bg-meine-electric text-sm tracking-wider mb-4">
           Technology
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 lg:max-w-3xl">
-          Inside the technology that defines us
+        <h2 className="text-3xl md:text-4xl font-bold mb-10 lg:max-w-xl">
+          Redefining Iron-Air Energy
         </h2>
-        <p className="text-gray-600 text-lg max-w-3xl">
-          At the core of our innovation is simplicity — using natural materials for dependable energy storage that powers a resilient, sustainable future.
-        </p>
-      </div>
 
-      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {steps.map((step, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: i * 0.2 }}
-            viewport={{ once: true }}
-            className="group relative h-[14rem] md:h-[36rem] rounded-2xl bg-white shadow-lg flex flex-col overflow-hidden"
-          >
-            <div className="relative w-full h-full">
-              <Image
-                src={step.img}
-                alt={`Step ${i + 1}`}
-                fill
-                className="object-cover rounded-2xl"
-              />
+        <div className="relative w-full max-w-5xl">
+          {/* Video */}
+          <video
+            ref={videoRef}
+            src="/cycle.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover rounded-lg"
+          />
 
-              {/* Gradient overlay on active or hover */}
-              {(activeIndex === i) && (
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10" />
-              )}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
-
-              {/* Animated border (active only) */}
-              {activeIndex === i && (
-                <motion.div
-                  key={`border-${i}`}
-                  initial={{ clipPath: 'inset(100% 0 0 0 round 0rem)' }}
-                  animate={{ clipPath: 'inset(0 0 0 0 round 0rem)' }}
-                  transition={{ 
-                    duration: 7, 
-                    ease: 'easeInOut', 
-                    repeat: Infinity, 
-                    repeatType: 'loop' 
-                  }}
-                  className="absolute inset-0 rounded-2xl border-4 border-meine-electric pointer-events-none z-20"
-                />
-              )}
-
-              {/* Text overlay - visible on active or hover */}
-              {(activeIndex === i) && (
-                <motion.div
-                  key={`text-${i}`}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, ease: 'easeInOut' }}
-                  className="absolute bottom-4 px-4 text-white font-medium text-xs z-30"
-                >
-                  {step.text}
-                </motion.div>
-              )}
-              <div className="absolute bottom-4 px-4 text-white font-medium text-xs z-30 opacity-0 group-hover:opacity-100 transition-opacity">
-                {step.text}
+          <div className="mt-6 flex flex-col space-y-4 md:hidden">
+            {steps.map((step, index) => (
+              <div key={index} className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-8 h-8 text-sm rounded-full bg-meine-electric text-white flex items-center justify-center font-semibold">
+                  {index + 1}
+                </span>
+                <span className="text-gray-600 text-left text-sm font-semibold leading-relaxed">{step.text}</span>
               </div>
-            </div>
-          </motion.div>
-        ))}
-      </div>
+            ))}
+          </div>
 
+          {/* Manual bullets */}
+          {steps.map((step, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 1, y: -15 }}
+              whileInView={{ opacity: 1, scale: 1 , y: 0}}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              className="absolute hidden md:flex items-start gap-3 max-w-xs"
+              style={{
+                top: step.top,
+                left: step.left,
+                right: step.right,
+              }}
+            >
+              <span className="flex-shrink-0 w-8 h-8 text-sm rounded-full bg-meine-electric text-white flex items-center justify-center font-semibold">
+                {index + 1}
+              </span>
+              <span className="text-gray-600 text-left text-base font-semibold leading-relaxed">{step.text}</span>
+            </motion.div>
+          ))}
+        </div>
+      </div>
     </section>
   )
 }

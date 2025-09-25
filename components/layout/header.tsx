@@ -79,7 +79,7 @@ export function Header() {
             exit="hidden"
             className="lg:hidden absolute top-full left-0 w-full bg-white shadow-lg z-20 overflow-hidden"
           >
-            <div className="flex flex-col gap-4 px-6 py-4 text-sm font-semibold text-[#222222]">
+            <div className="flex flex-col gap-4 px-6 py-8 text-base font-semibold text-[#222222]">
               <button onClick={() => setMenuOpen(false)}>Home</button>
               <button onClick={() => setMenuOpen(false)}>About</button>
               <button onClick={() => setMenuOpen(false)}>Contact</button>

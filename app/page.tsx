@@ -19,7 +19,7 @@ export default function Home() {
 
 
       {/* Technology Section */}
-      {/* <TechnologySection /> */}
+      <TechnologySection />
 
       {/* Why Iron Air Section */}
       <WhyIronair/>

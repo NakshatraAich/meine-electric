@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export function CompanyIntroduction() {
   return (
-    <section className="section-spacing bg-white pt-20 md:pt-24">
+    <section className="section-spacing bg-white pt-20 md:pt-24 xl:mx-12">
       <div className="container-padding flex flex-col  gap-12 lg:gap-36 lg:flex-row items-start">
         
         {/* Left Content */}
@@ -22,13 +22,13 @@ export function CompanyIntroduction() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 max-w-sm">
             About <span className='text-meine-electric'>Meine Electric</span>
           </h2>
-          <p className="max-w-lg text-gray-600 text-lg mb-2 font-semibold">
+          <p className="max-w-lg text-gray-600 text-base sm:text-lg mb-2 font-semibold">
             We are building energy infrastructure of tomorrow &mdash; innovative, sustainable, and resilient.
           </p>
-          <p className="max-w-lg text-gray-600 text-lg mb-2">
+          <p className="max-w-lg text-gray-600 text-base sm:text-lg mb-2">
             At Meine Electric, our passionate team of engineers, creators, and visionaries is united by a shared purpose: to transform the way energy is generated, stored, and delivered. 
           </p>
-          <p className="max-w-lg text-gray-600 text-lg">
+          <p className="max-w-lg text-gray-600 text-base sm:text-lg">
             Together, we are shaping a future where clean power is reliable, accessible, and empowers communities and industries to thrive.
           </p>
           <div className='mt-12 text-xl font-semibold'>
@@ -38,9 +38,9 @@ export function CompanyIntroduction() {
 
         {/* Right Image Collage */}
         <div
-          className="w-full lg:w-2/3 grid grid-cols-3 grid-rows-2 gap-2 h-[500px] lg:h-[650px]"
+          className="w-full lg:w-2/3 flex flex-col sm:grid grid-cols-3 grid-rows-2 gap-2 h-[1000px] lg:h-[650px]"
         >
-          <div className="relative col-span-2 rounded-sm overflow-hidden">
+          <div className="flex-1 relative col-span-2 rounded-sm overflow-hidden">
             <Image
               src="/images/comp1.jpeg"
               alt="Collage image 1"
@@ -49,7 +49,7 @@ export function CompanyIntroduction() {
             />
           </div>
 
-          <div className="relative col-span-1 rounded-sm overflow-hidden">
+          <div className="flex-1 origin-top relative col-span-1 rounded-sm overflow-hidden">
             <Image
               src="/images/comp2.webp"
               alt="Collage image 2"
@@ -58,7 +58,7 @@ export function CompanyIntroduction() {
             />
           </div>
 
-          <div className="relative col-span-1 rounded-sm overflow-hidden">
+          <div className="flex-1 relative col-span-1 rounded-sm overflow-hidden">
             <Image
               src="/images/comp3.jpeg"
               alt="Collage image 3"
@@ -67,7 +67,7 @@ export function CompanyIntroduction() {
             />
           </div>
 
-          <div className="relative col-span-2 rounded-sm overflow-hidden">
+          <div className="flex-1 relative col-span-2 rounded-sm overflow-hidden">
             <Image
               src="/images/comp4.jpeg"
               alt="Collage image 4"

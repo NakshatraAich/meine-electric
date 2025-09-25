@@ -22,7 +22,7 @@ const itemVariants = {
 export function HeroSection() {
   return (
     <section className="relative bg-white mt-24 md:mt-36 lg:mt-0 overflow-x-hidden">
-      <div className="flex flex-col lg:flex-row w-full gap-16 md:gap-12 lg:gap-0">
+      <div className="flex flex-col lg:flex-row w-full gap-5 md:gap-12 lg:gap-0">
 
         {/* Left Content */}
         <motion.div
@@ -53,6 +53,8 @@ export function HeroSection() {
               alt="Scalable Energy"
               className="w-full h-full object-cover object-left"
             />
+
+            <div className="absolute -bottom-1 inset-0 bg-gradient-to-b from-transparent via-white/10 to-white"></div>
           </div>
 
           {/* Large screens: full width, fixed height */}
