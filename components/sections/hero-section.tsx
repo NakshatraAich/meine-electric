@@ -34,7 +34,7 @@ export function HeroSection() {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-3xl md:text-4xl md:max-w-lg font-bold text-[#222222]"
+            className="text-4xl md:text-4xl md:max-w-lg font-bold text-[#222222]"
           >
             Low-Cost Multi-Day Energy Storage with Breakthrough{' '}
             <span className="text-meine-electric">Iron Air Technology</span>
