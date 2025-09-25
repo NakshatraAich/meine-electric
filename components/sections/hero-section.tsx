@@ -21,7 +21,7 @@ const itemVariants = {
 
 export function HeroSection() {
   return (
-    <section className="relative bg-white mt-24 md:mt-36 lg:mt-0 overflow-x-hidden">
+    <section className="relative bg-white mt-24 md:mt-36 lg:mt-0 overflow-hidden">
       <div className="flex flex-col lg:flex-row w-full gap-5 md:gap-12 lg:gap-0">
 
         {/* Left Content */}
@@ -44,21 +44,10 @@ export function HeroSection() {
         </motion.div>
 
         {/* Right Image */}
-        <div className="w-full lg:w-2/3 flex-shrink-0">
+        <div className="w-full lg:w-2/3 flex-shrink-0 relative">
 
           {/* Small & Medium screens: aspect ratio 3:4 */}
-          <div className="lg:hidden w-full aspect-[3/4] overflow-hidden">
-            <img
-              src="/images/hero-background.png"
-              alt="Scalable Energy"
-              className="w-full h-full object-cover object-left"
-            />
-
-            <div className="absolute -bottom-1 inset-0 bg-gradient-to-b from-transparent via-white/10 to-white"></div>
-          </div>
-
-          {/* Large screens: full width, fixed height */}
-          <div className="relative hidden lg:block w-full h-dvh overflow-hidden rounded-bl-xl -ml-16">
+          <div className="lg:hidden w-full aspect-[3/4] overflow-hidden relative">
             <img
               src="/images/hero-background.png"
               alt="Scalable Energy"
@@ -66,7 +55,19 @@ export function HeroSection() {
             />
 
             {/* Gradient overlay */}
-            <div className="absolute -left-1 -ml-1 inset-0 bg-gradient-to-r from-white via-transparent to-transparent"></div>
+            <div className="absolute bottom-0 inset-x-0 bg-gradient-to-b from-transparent via-white/10 to-white"></div>
+          </div>
+
+          {/* Large screens: full width, fixed height */}
+          <div className="hidden lg:block w-full h-dvh overflow-hidden rounded-bl-xl">
+            <img
+              src="/images/hero-background.png"
+              alt="Scalable Energy"
+              className="w-full h-full object-cover object-left"
+            />
+
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent"></div>
           </div>
         </div>
       </div>
