@@ -4,18 +4,18 @@ import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
 const partners = [
-  { name: 'Irena', logo: '/logos/irena.png', sizes: { sm: 80, md: 100, lg: 180 } },
-  { name: 'BITS Pilani', logo: '/logos/bits.svg', sizes: { sm: 40, md: 60, lg: 100 } },
-  { name: 'Climate Collective', logo: '/logos/climate.webp', sizes: { sm: 60, md: 80, lg: 100 } },
-  { name: 'Shell', logo: '/logos/shell.png', sizes: { sm: 70, md: 90, lg: 100 } },
-  { name: 'Nasscom', logo: '/logos/nasscom.svg', sizes: { sm: 60, md: 80, lg: 180 } },
-  { name: 'Baker Hughes', logo: '/logos/baker.png', sizes: { sm: 80, md: 100, lg: 180 } },
-  { name: 'ARAI', logo: '/logos/arai.png', sizes: { sm: 80, md: 100, lg: 180 } },
-  { name: 'SPTBI', logo: '/logos/sptbi.png', sizes: { sm: 60, md: 80, lg: 180 } },
-  { name: 'Anna University', logo: '/logos/anna.svg', sizes: { sm: 30, md: 50, lg: 100 } },
-  { name: 'Technoserve', logo: '/logos/technoserve.png', sizes: { sm: 80, md: 100, lg: 180 } },
-  { name: 'Niti Aayog', logo: '/logos/niti.png', sizes: { sm: 50, md: 70, lg: 100 } },
-  { name: 'Dept. of Science and Tech.', logo: '/logos/dst.svg', sizes: { sm: 50, md: 70, lg: 100 } },
+  { name: 'Irena', logo: '/logos/irena.png', sizes: { sm: 100, md: 120, lg: 180 } },
+  { name: 'BITS Pilani', logo: '/logos/bits.svg', sizes: { sm: 40, md: 80, lg: 100 } },
+  { name: 'Climate Collective', logo: '/logos/climate.webp', sizes: { sm: 80, md: 80, lg: 100 } },
+  { name: 'Shell', logo: '/logos/shell.png', sizes: { sm: 70, md: 80, lg: 100 } },
+  { name: 'Nasscom', logo: '/logos/nasscom.svg', sizes: { sm: 60, md: 120, lg: 180 } },
+  { name: 'Baker Hughes', logo: '/logos/baker.png', sizes: { sm: 80, md: 120, lg: 180 } },
+  { name: 'ARAI', logo: '/logos/arai.png', sizes: { sm: 80, md: 120, lg: 180 } },
+  { name: 'SPTBI', logo: '/logos/sptbi.png', sizes: { sm: 60, md: 120, lg: 180 } },
+  { name: 'Anna University', logo: '/logos/anna.svg', sizes: { sm: 30, md: 80, lg: 100 } },
+  { name: 'Technoserve', logo: '/logos/technoserve.png', sizes: { sm: 80, md: 120, lg: 180 } },
+  { name: 'Niti Aayog', logo: '/logos/niti.png', sizes: { sm: 50, md: 80, lg: 100 } },
+  { name: 'Dept. of Science and Tech.', logo: '/logos/dst.svg', sizes: { sm: 50, md: 80, lg: 100 } },
 ]
 
 export function RecognitionSection() {

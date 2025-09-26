@@ -54,9 +54,17 @@ export function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex gap-6 text-sm font-semibold text-[#222222] ml-auto">
-          <button>Home</button>
-          <button>About</button>
-          <button>Contact</button>
+          <nav className="hidden lg:flex gap-6 text-sm font-semibold text-[#222222] ml-auto">
+            <button onClick={() => document.getElementById('tech')?.scrollIntoView({ behavior: 'smooth' })}>
+              Technology
+            </button>
+            <button onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
+              About
+            </button>
+            <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+              Contact
+            </button>
+          </nav>
         </nav>
 
         {/* Mobile Hamburger */}
@@ -77,12 +85,12 @@ export function Header() {
             initial="hidden"
             animate="visible"
             exit="hidden"
-            className="lg:hidden absolute top-full left-0 w-full bg-white shadow-lg z-20 overflow-hidden"
+            className="lg:hidden absolute -z-10 left-0 top-[100] w-full bg-white shadow-lg  overflow-hidden"
           >
             <div className="flex flex-col gap-4 px-6 py-8 text-base font-semibold text-[#222222]">
-              <button onClick={() => setMenuOpen(false)}>Home</button>
-              <button onClick={() => setMenuOpen(false)}>About</button>
-              <button onClick={() => setMenuOpen(false)}>Contact</button>
+              <button onClick={() => { setMenuOpen(false); document.getElementById('tech')?.scrollIntoView({ behavior: 'smooth' }) }}>Technology</button>
+              <button onClick={() => { setMenuOpen(false); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }) }}>About</button>
+              <button onClick={() => { setMenuOpen(false); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) }}>Contact</button>
             </div>
           </motion.div>
         )}

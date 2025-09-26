@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export function CompanyIntroduction() {
   return (
-    <section className="section-spacing bg-white pt-20 md:pt-24 xl:mx-12">
+    <section id='about' className="section-spacing bg-white pt-20 md:pt-24 xl:mx-12">
       <div className="container-padding flex flex-col  gap-12 lg:gap-36 lg:flex-row items-start">
         
         {/* Left Content */}

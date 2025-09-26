@@ -54,12 +54,20 @@ const PartialCorrect = () => (
 export function WhyIronair() {
 
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [hoveredBox, setHoveredBox] = useState<string | null>(null);
 
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.playbackRate = 0.5; // 0.5 = half speed, 2 = double speed
     }
   }, []);
+
+  const boxIcons = [
+    { src: '/images/cost.png', alt: 'Battery', text: 'Extremely Cost Effective'},
+    { src: '/images/clock.png', alt: 'Power', text: 'Can Store Electricity for Seasonal Durations' },
+    { src: '/images/scale.png', alt: 'Renewable', text: 'Scalable Without Impacting Nature' },
+    { src: '/images/safety.png', alt: 'Safety', text: 'Safe Without Fire Risk' },
+  ];
 
   return (
     <section className="section-spacing bg-white pt-20 md:pt-24 xl:mx-12">
@@ -107,7 +115,7 @@ export function WhyIronair() {
           </motion.div>
 
           {/* Video Section */}
-          <div className="flex-1 w-full relative aspect-[3/4] lg:aspect-[4/3] overflow-hidden rounded-sm">
+          <div className="flex-1 w-full relative aspect-[3/4] lg:aspect-[4/3] overflow-hidden rounded-sm group">
             <video
               src="/vid.mkv"
               ref={videoRef}
@@ -117,6 +125,13 @@ export function WhyIronair() {
               playsInline
               className="object-cover w-full h-full"
             />
+
+            {/* Tooltip for hovered box */}
+            {hoveredBox && (
+              <span className="absolute top-2 text-white text-sm lg:text-lg right-2 bg-meine-electric font-semibold px-2 py-1 rounded shadow-md z-20 transition-opacity duration-200 pointer-events-none">
+                {hoveredBox}
+              </span>
+            )}
 
             {/* Bottom-left animated boxes */}
             <motion.div
@@ -128,16 +143,18 @@ export function WhyIronair() {
                 visible: { transition: { staggerChildren: 0.1 } },
               }}
             >
-              {['Box 1', 'Box 2', 'Box 3'].map((text, idx) => (
+              {boxIcons.map((item, idx) => (
                 <motion.div
                   key={idx}
-                  className="border-meine-electric border-2 aspect-square bg-meine-electric text-white px-4 py-4 rounded flex items-center justify-center"
+                  className="relative border-meine-electric border-2 aspect-square bg-meine-electric rounded flex items-center justify-center p-2"
                   variants={{
                     hidden: { opacity: 0, y: 20, scale: 1 },
                     visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } },
                   }}
+                  onMouseEnter={() => setHoveredBox(item.text)}
+                  onMouseLeave={() => setHoveredBox(null)}
                 >
-                  {text}
+                  <img src={item.src} alt={item.alt} className="w-12 h-12 sm:w-20 sm:h-20 object-contain" />
                 </motion.div>
               ))}
             </motion.div>

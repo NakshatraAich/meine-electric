@@ -34,13 +34,15 @@ export function HeroSection() {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl md:text-4xl md:max-w-lg font-bold text-[#222222]"
+            className="text-4xl md:text-4xl md:max-w-lg font-bold text-[#222222] mb-6 lg:mb-0"
           >
             Low-Cost Multi-Day Energy Storage with Breakthrough{' '}
             <span className="text-meine-electric">Iron Air Technology</span>
           </motion.h2>
 
-          <RecognitionSection />
+          <div className='lg:block hidden'>
+            <RecognitionSection />
+          </div>
         </motion.div>
 
         {/* Right Image */}
@@ -69,6 +71,10 @@ export function HeroSection() {
             {/* Gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent"></div>
           </div>
+        </div>
+
+        <div className='lg:hidden block'>
+          <RecognitionSection />
         </div>
       </div>
     </section>

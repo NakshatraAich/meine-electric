@@ -17,7 +17,7 @@ export function TechnologySection() {
   }, [])
 
   return (
-    <section className="container-padding xl:mx-12 pt-20 md:pt-24">
+    <section id="tech" className="container-padding xl:mx-12 pt-20 md:pt-24">
       <div className="text-center mb-12 flex flex-col items-center">
         <p className="text-white px-4 pb-2 pt-2 w-fit rounded-lg font-semibold bg-meine-electric text-sm tracking-wider mb-4">
           Technology
@@ -38,7 +38,7 @@ export function TechnologySection() {
             className="w-full h-full object-cover rounded-lg"
           />
 
-          <div className="mt-6 flex flex-col space-y-4 md:hidden">
+          <div className="mt-6 flex flex-col space-y-4 xl:hidden">
             {steps.map((step, index) => (
               <div key={index} className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-8 h-8 text-sm rounded-full bg-meine-electric text-white flex items-center justify-center font-semibold">
@@ -57,7 +57,7 @@ export function TechnologySection() {
               whileInView={{ opacity: 1, scale: 1 , y: 0}}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="absolute hidden md:flex items-start gap-3 max-w-xs"
+              className="absolute hidden xl:flex items-start gap-3 max-w-xs"
               style={{
                 top: step.top,
                 left: step.left,
