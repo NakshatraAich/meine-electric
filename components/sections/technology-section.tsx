@@ -25,7 +25,6 @@ export function TechnologySection() {
         <h2 className="text-3xl md:text-4xl font-bold mb-10 lg:max-w-xl">
           Redefining Wide-Scale<br/> Grid Energy
         </h2>
-
         <div className="relative w-full max-w-5xl">
           {/* Video */}
           <video
@@ -70,6 +69,10 @@ export function TechnologySection() {
               <span className="text-gray-600 text-left text-base font-semibold leading-relaxed">{step.text}</span>
             </motion.div>
           ))}
+        </div>
+        <div className='border-2 border-meine-electric py-8 px-12 rounded-lg border-dashed text-left text-3xl font-semibold items-center flex flex-row gap-2 mt-12 sm:mt-36 max-w-xl'>
+          <div className='text-base sm:text-xl leading-snug '>24 Hours of <span className='text-meine-electric'>Energy Storage at</span></div>
+          <div className='w-2/3 text-base sm:text-lg text-center bg-meine-electric rounded-lg px-4 py-2'><span className='font-bold text-4xl sm:text-6xl'>$0.08</span><br/>per kwH</div>
         </div>
       </div>
     </section>
