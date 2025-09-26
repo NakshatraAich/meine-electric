@@ -13,7 +13,7 @@ export function TechnologySection() {
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
-    if (videoRef.current) videoRef.current.playbackRate = 1
+    if (videoRef.current) videoRef.current.playbackRate = 2
   }, [])
 
   return (

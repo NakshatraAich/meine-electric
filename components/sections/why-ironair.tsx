@@ -202,7 +202,7 @@ export function WhyIronair() {
 
                 <tbody className="text-center py-8">
                   <tr>
-                    <td rowSpan={2} className="px-4 py-2 text-left font-semibold"></td>
+                    <td className="px-4 py-2 text-left font-semibold"></td>
                     <td className="px-4 py-2 text-left font-bold">LCOS<br />($/kWh)</td>
                     <td className="border-meine-electric border-x-2">0.08</td>
                     <td>0.25</td>
@@ -210,15 +210,6 @@ export function WhyIronair() {
                     <td>0.19</td>
                     <td>0.15</td>
                     <td>0.09</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-2 text-left">Commercial grid level readiness</td>
-                    <td className="border-meine-electric border-x-2">Early <br/>Commercial</td>
-                    <td>Early <br/>Commercial</td>
-                    <td>Emerging</td>
-                    <td>Commercial</td>
-                    <td>Commercial</td>
-                    <td>Commercial</td>
                   </tr>
 
                   {/* Intraday */}
