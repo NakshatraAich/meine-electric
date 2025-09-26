@@ -12,9 +12,9 @@ const partners = [
   { name: 'Shell', logo: '/logos/shell.png', sizes: { sm: 120, md: 80, lg: 100 } },
   { name: 'Nasscom', logo: '/logos/nasscom.svg', sizes: { sm: 120, md: 120, lg: 180 } },
   { name: 'Baker Hughes', logo: '/logos/baker.png', sizes: { sm: 120, md: 120, lg: 180 } },
-  { name: 'ARAI', logo: '/logos/arai.png', sizes: { sm: 120, md: 120, lg: 180 } },
+  { name: 'ARAI', logo: '/logos/arai.png', sizes: { sm: 120, md: 120, lg: 1800 } },
   { name: 'SPTBI', logo: '/logos/sptbi.png', sizes: { sm: 120, md: 120, lg: 180 } },
-  { name: 'Anna University', logo: '/logos/anna.svg', sizes: { sm: 120, md: 80, lg: 0 } },
+  { name: 'Anna University', logo: '/logos/anna.svg', sizes: { sm: 120, md: 80, lg: 100 } },
   { name: 'Technoserve', logo: '/logos/technoserve.png', sizes: { sm: 120, md: 120, lg: 180 } },
   { name: 'Niti Aayog', logo: '/logos/niti.png', sizes: { sm: 120, md: 80, lg: 100 } },
   { name: 'Dept. of Science and Tech.', logo: '/logos/dst.svg', sizes: { sm: 120, md: 80, lg: 20 } },
@@ -56,7 +56,7 @@ export function RecognitionSection() {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className="embla__container h-fit flex gap-4 md:gap-6 lg:gap-6">
+        <div className="embla__container h-fit flex gap-4 md:gap-6 lg:gap-6 flex-row items-center">
           {[...partners, ...partners].map((partner, idx) => (
             <div
               key={partner.name + idx}
@@ -67,7 +67,14 @@ export function RecognitionSection() {
                 alt={partner.name}
                 width={partner.sizes.sm}
                 height={partner.sizes.sm}
-                className="sm:w-[var(--sm)] md:w-[var(--md)] lg:w-[var(--lg)] h-24 aspect-square object-contain"
+                className="aspect-[2/1] object-contain"
+                style={{
+                  '--sm': `${partner.sizes.sm}px`,
+                  '--md': `${partner.sizes.md}px`,
+                  '--lg': `${partner.sizes.lg}px`,
+                  width: 'var(--sm)',
+                  height: 'auto',
+                } as React.CSSProperties}
               />
               <div className="absolute top-0 right-0 bg-white text-black text-xs px-2 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 z-10 transition-all duration-300 pointer-events-none whitespace-nowrap translate-x-1/2 -translate-y-1/2">
                 {partner.name}
