@@ -153,17 +153,14 @@ export function WhyIronair() {
           <div className="flex flex-col-reverse gap-8 justify-center items-center w-full">
             <div className="shadow-lg rounded-sm overflow-x-auto w-full">
               <table className="min-w-full bg-stone-100/50 border-collapse text-center sm:text-base text-xs relative">
-                
-                {/* 🟦 This makes the Iron Air column continuous */}
                 <colgroup>
                   <col />
                   <col />
-                  <col />
-                  <col />
-                  <col />
-                  <col />
-                  <col />
                   <col className="bg-meine-electric/10 border-x-2 border-meine-electric" />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
                   <col />
                 </colgroup>
 
@@ -175,101 +172,90 @@ export function WhyIronair() {
                     <th className="px-4 py-2 text-[#222222] font-bold border-b-2 border-[#626262]">
                       Power system parameter
                     </th>
+                    <th className="px-4 py-2 text-[#222222] font-bold border-b-2 border-2 border-meine-electric">
+                      Iron Air Batteries
+                    </th>
                     <th className="px-4 py-2 text-[#222222] font-bold border-b-2 border-[#626262]">Redox Flow Batteries</th>
                     <th className="px-4 py-2 text-[#222222] font-bold border-b-2 border-[#626262]">Zinc Air Batteries</th>
                     <th className="px-4 py-2 text-[#222222] font-bold border-b-2 border-[#626262]">Lead Acid Batteries</th>
                     <th className="px-4 py-2 text-[#222222] font-bold border-b-2 border-[#626262]">Lithium Ion Batteries</th>
                     <th className="px-4 py-2 text-[#222222] font-bold border-b-2 border-[#626262]">Pumped Hydro Store</th>
-
-                    {/* ✅ This column now has a continuous bar behind it */}
-                    <th className="px-4 py-2 text-[#222222] font-bold border-b-0 border-2 border-meine-electric">
-                      Iron Air Batteries
-                    </th>
-
-                    <th className="px-4 py-2 text-[#222222] font-bold border-b-2 bor border-[#626262]">Net Metering</th>
                   </tr>
                 </thead>
 
                 <tbody className="text-center py-8">
-                  <tr className="">
+                  <tr>
                     <td rowSpan={2} className="px-4 py-2 text-left font-semibold"></td>
                     <td className="px-4 py-2 text-left font-bold">LCOS<br />($/kWh)</td>
+                    <td className="border-meine-electric border-x-2">0.08</td>
                     <td>0.25</td>
                     <td>0.22</td>
                     <td>0.19</td>
                     <td>0.15</td>
                     <td>0.09</td>
-                    <td className="border-meine-electric border-x-2">0.08</td>
-                    <td>0.05</td>
                   </tr>
-                  <tr className="">
+                  <tr>
                     <td className="px-4 py-2 text-left">Commercial grid level readiness</td>
+                    <td className="border-meine-electric border-x-2">Early Commercial</td>
                     <td>Early Commercial</td>
                     <td>Emerging</td>
                     <td>Commercial</td>
                     <td>Commercial</td>
                     <td>Commercial</td>
-                    <td className="border-meine-electric border-x-2">Early Commercial</td>
-                    <td>Commercial</td>
                   </tr>
 
                   {/* Intraday */}
-                  <tr className="">
+                  <tr>
                     <td className="px-4 py-2 text-left font-bold">Intraday</td>
                     <td className="px-4 py-2 text-left">Intermittent daily generation</td>
+                    <td className="border-meine-electric border-x-2"><PartialCorrect /></td>
                     <td><Correct /></td>
                     <td><Correct /></td>
                     <td><PartialCorrect /></td>
                     <td><Correct /></td>
-                    <td><Correct /></td>
-                    <td className="border-meine-electric border-x-2"><PartialCorrect /></td>
                     <td><Correct /></td>
                   </tr>
 
                   {/* Multiday */}
-                  <tr className="">
+                  <tr>
                     <td rowSpan={2} className="px-4 py-2 text-left font-bold">Multiday, multiweek</td>
                     <td className="px-4 py-2 text-left">Multiday<br />imbalances</td>
-                    <td><PartialCorrect /></td>
-                    <td><PartialCorrect /></td>
-                    <td></td>
-                    <td><PartialCorrect /></td>
-                    <td><PartialCorrect /></td>
                     <td className="border-meine-electric border-x-2"><Correct /></td>
+                    <td><PartialCorrect /></td>
+                    <td><PartialCorrect /></td>
                     <td></td>
+                    <td><PartialCorrect /></td>
+                    <td><PartialCorrect /></td>
                   </tr>
-                  <tr className="">
+                  <tr>
                     <td className="px-4 py-2 text-left">Grid<br />congestion</td>
+                    <td className="border-meine-electric border-x-2"><Correct /></td>
                     <td><Correct /></td>
                     <td><PartialCorrect /></td>
                     <td></td>
                     <td><PartialCorrect /></td>
-                    <td><PartialCorrect /></td>
-                    <td className="border-meine-electric border-x-2"><Correct /></td>
                     <td><PartialCorrect /></td>
                   </tr>
 
                   {/* Seasonal */}
-                  <tr className="">
+                  <tr>
                     <td rowSpan={2} className="px-4 py-2 text-left font-bold">Seasonal<br />duration</td>
                     <td className="px-4 py-2 text-left">Seasonal<br />unbalances</td>
+                    <td className="border-meine-electric border-x-2 border-b-0"><Correct /></td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td><Correct /></td>
-                    <td className="border-meine-electric border-b-0 border-x-2"><Correct /></td>
-                    <td></td>
                   </tr>
                   <tr>
                     <td className="px-4 py-2 text-left">Extreme weather<br />events</td>
+                    <td className="border-meine-electric border-x-2 border-t-0 border-b-2"><Correct /></td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td><PartialCorrect /></td>
-                    <td className="border-meine-electric border-x-2 border-t-0 border-b-2"><Correct /></td>
-                    <td></td>
                   </tr>
                 </tbody>
               </table>
