@@ -37,7 +37,7 @@ export function RecognitionSection() {
           }
           
           .scroll-container {
-            animation: scroll 5s linear infinite;
+            animation: scroll 30s linear infinite;
             width: fit-content;
           }
           
