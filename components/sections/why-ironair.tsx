@@ -128,7 +128,7 @@ export function WhyIronair() {
 
             {/* Tooltip for hovered box */}
             {hoveredBox && (
-              <span className="absolute top-2 text-white text-sm lg:text-lg right-2 bg-meine-electric font-semibold px-2 py-1 rounded shadow-md z-20 transition-opacity duration-200 pointer-events-none">
+              <span className="absolute top-2 text-white text-sm lg:text-lg right-2 bg-meine-electric font-semibold px-2 py-1 rounded z-20 transition-opacity duration-200 pointer-events-none">
                 {hoveredBox}
               </span>
             )}

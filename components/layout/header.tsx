@@ -43,7 +43,7 @@ export function Header() {
     >
       <div className="flex items-center justify-between lg:justify-start lg:w-fit lg:gap-20 w-full max-w-[1500px] bg-white shadow-lg my-5 px-6 py-1 rounded-sm">
         {/* Logo */}
-        <div className="relative w-[10rem] lg:w-[14rem] h-20 mx-0">
+        <div className="relative w-[10rem] lg:w-[14rem] h-20 mx-0" onClick={() => document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' })}>
           <Image
             src="/logo.svg"
             alt="Meine Electric Logo"

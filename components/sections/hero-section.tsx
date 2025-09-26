@@ -21,7 +21,7 @@ const itemVariants = {
 
 export function HeroSection() {
   return (
-    <section className="relative bg-white mt-24 md:mt-36 lg:mt-0 overflow-hidden">
+    <section id="hero" className="relative bg-white mt-24 md:mt-36 lg:mt-0 overflow-hidden">
       <div className="flex flex-col lg:flex-row w-full gap-5 md:gap-12 lg:gap-0">
 
         {/* Left Content */}
