@@ -7,29 +7,28 @@ import { useEffect } from 'react'
 
 const partners = [
   { name: 'Irena', logo: '/logos/irena.png', size: 160 },
-  { name: 'BITS Pilani', logo: '/logos/bits.svg', size: 100 },
-  { name: 'Climate Collective', logo: '/logos/climate.webp', size: 160 },
+  { name: 'BITS Pilani', logo: '/logos/bits.svg', size: 120 },
+  { name: 'Climate Collective', logo: '/logos/climate.webp', size: 180 },
   { name: 'Shell', logo: '/logos/shell.png', size: 170 },
   { name: 'Nasscom', logo: '/logos/nasscom.svg', size: 160 },
-  { name: 'Baker Hughes', logo: '/logos/baker.png', size: 180 },
-  { name: 'ARAI', logo: '/logos/arai.png', size: 160 },
+  { name: 'Baker Hughes', logo: '/logos/baker.png', size: 200 },
+  { name: 'ARAI', logo: '/logos/arai.png', size: 200 },
   { name: 'SPTBI', logo: '/logos/sptbi.png', size: 160 },
   { name: 'Anna University', logo: '/logos/anna.svg', size: 100 },
-  { name: 'Technoserve', logo: '/logos/technoserve.png', size: 160 },
+  { name: 'Technoserve', logo: '/logos/technoserve.png', size: 400 },
   { name: 'Niti Aayog', logo: '/logos/niti.png', size: 100 },
   { name: 'Dept. of Science and Tech.', logo: '/logos/dst.svg', size: 160 },
 
-  // duplicate for infinite scroll
   { name: 'Irena', logo: '/logos/irena.png', size: 160 },
   { name: 'BITS Pilani', logo: '/logos/bits.svg', size: 120 },
-  { name: 'Climate Collective', logo: '/logos/climate.webp', size: 160 },
+  { name: 'Climate Collective', logo: '/logos/climate.webp', size: 180 },
   { name: 'Shell', logo: '/logos/shell.png', size: 170 },
   { name: 'Nasscom', logo: '/logos/nasscom.svg', size: 160 },
-  { name: 'Baker Hughes', logo: '/logos/baker.png', size: 160 },
-  { name: 'ARAI', logo: '/logos/arai.png', size: 160 },
+  { name: 'Baker Hughes', logo: '/logos/baker.png', size: 200 },
+  { name: 'ARAI', logo: '/logos/arai.png', size: 200 },
   { name: 'SPTBI', logo: '/logos/sptbi.png', size: 160 },
   { name: 'Anna University', logo: '/logos/anna.svg', size: 120 },
-  { name: 'Technoserve', logo: '/logos/technoserve.png', size: 160 },
+  { name: 'Technoserve', logo: '/logos/technoserve.png', size: 400 },
   { name: 'Niti Aayog', logo: '/logos/niti.png', size: 120 },
   { name: 'Dept. of Science and Tech.', logo: '/logos/dst.svg', size: 160 },
 ]
@@ -39,8 +38,8 @@ export function RecognitionSection() {
 
   useEffect(() => {
     controls.start({
-      x: ['0%', '-485%'],
-      transition: { x: { repeat: Infinity, repeatType: 'loop', duration: 35, ease: 'linear' } },
+      x: ['-0%', '-622%'],
+      transition: { x: { repeat: Infinity, repeatType: 'loop', duration: 5, ease: 'linear' } },
     })
   }, [controls])
 
@@ -60,7 +59,7 @@ export function RecognitionSection() {
                 'relative flex-shrink-0 flex items-center justify-center p-4 cursor-pointer group',
                 'transition-transform duration-300 hover:scale-105'
               )}
-              style={{ width: 145, height: 145 }}
+              style={{ width: 200, height: 200 }}
             >
               <Image
                 src={partner.logo}
