@@ -154,7 +154,7 @@ export function WhyIronair() {
                   onMouseEnter={() => setHoveredBox(item.text)}
                   onMouseLeave={() => setHoveredBox(null)}
                 >
-                  <img src={item.src} alt={item.alt} className="w-12 h-12 sm:w-20 sm:h-20 object-contain" />
+                  <img src={item.src} alt={item.alt} className="w-12 h-12 sm:w-12 sm:h-12 object-contain" />
                 </motion.div>
               ))}
             </motion.div>
