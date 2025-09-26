@@ -189,7 +189,7 @@ export function WhyIronair() {
                     <th className="px-4 py-2 text-[#222222] font-bold border-b-2 border-[#626262]">
                       Power system parameter
                     </th>
-                    <th className="px-4 py-2 text-[#222222] font-bold border-b-2 border-2 border-meine-electric">
+                    <th className="px-4 py-2 text-[#222222] font-bold border-b-0 border-2 border-meine-electric">
                       Iron Air Batteries
                     </th>
                     <th className="px-4 py-2 text-[#222222] font-bold border-b-2 border-[#626262]">Redox Flow Batteries</th>
@@ -213,8 +213,8 @@ export function WhyIronair() {
                   </tr>
                   <tr>
                     <td className="px-4 py-2 text-left">Commercial grid level readiness</td>
-                    <td className="border-meine-electric border-x-2">Early Commercial</td>
-                    <td>Early Commercial</td>
+                    <td className="border-meine-electric border-x-2">Early <br/>Commercial</td>
+                    <td>Early <br/>Commercial</td>
                     <td>Emerging</td>
                     <td>Commercial</td>
                     <td>Commercial</td>
