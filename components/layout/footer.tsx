@@ -15,8 +15,8 @@ const contactItems = [
   {
     icon: Phone,
     title: "Call Us",
-    value: "+1 (234) 567-8900",
-    href: "tel:+1234567890",
+    value: "+91 7981253458",
+    href: "tel:+917981253458",
     color: "text-stone-400",
   },
   {
