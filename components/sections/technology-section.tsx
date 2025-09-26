@@ -23,7 +23,7 @@ export function TechnologySection() {
           Technology
         </p>
         <h2 className="text-3xl md:text-4xl font-bold mb-10 lg:max-w-xl">
-          Redefining Iron-Air Energy
+          Redefining Wide-Scale<br/> Grid Energy
         </h2>
 
         <div className="relative w-full max-w-5xl">
