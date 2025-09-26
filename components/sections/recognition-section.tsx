@@ -67,7 +67,7 @@ export function RecognitionSection() {
                 alt={partner.name}
                 width={partner.sizes.sm}
                 height={partner.sizes.sm}
-                className="sm:w-[var(--sm)] md:w-[var(--md)] lg:w-[var(--lg)] h-32 aspect-square object-contain"
+                className="sm:w-[var(--sm)] md:w-[var(--md)] lg:w-[var(--lg)] h-24 aspect-square object-contain"
               />
               <div className="absolute top-0 right-0 bg-white text-black text-xs px-2 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 z-10 transition-all duration-300 pointer-events-none whitespace-nowrap translate-x-1/2 -translate-y-1/2">
                 {partner.name}
