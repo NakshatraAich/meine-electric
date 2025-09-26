@@ -83,7 +83,7 @@ export function WhyIronair() {
             className="xl:max-w-sm lg:max-w-xs w-full"
           >
             <p className="text-white px-3 py-1 w-fit rounded-md font-semibold border-meine-electric bg-meine-electric border-2 text-sm tracking-wide mb-3">
-              Reasoning
+              Background
             </p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 max-w-md">
               Why choose <span className="text-meine-electric">Iron-Air</span> for the future grid?
@@ -110,12 +110,16 @@ export function WhyIronair() {
               <Accordion
                 title="Grid Reliability"
                 content="Multi-day storage ensures grid stability during periods of low renewable generation."
+              />              
+              <Accordion
+                title="India's Supply Chain Advantage"
+                content="With abundant resources and strong manufacturing, India is set to become a key player in the global iron-air battery supply chain"
               />
             </div>
           </motion.div>
 
           {/* Video Section */}
-          <div className="flex-1 w-full relative aspect-[3/4] lg:aspect-[4/3] overflow-hidden rounded-sm group">
+          <div className="flex-1 w-full relative aspect-square lg:aspect-[4/3] overflow-hidden rounded-sm group">
             <video
               src="/vid.mkv"
               ref={videoRef}
@@ -123,7 +127,7 @@ export function WhyIronair() {
               loop
               muted
               playsInline
-              className="object-cover w-full h-full"
+              className="object-cover aspect-square sm:aspect-auto w-full h-auto sm:h-full"
             />
 
             {/* Tooltip for hovered box */}
@@ -164,7 +168,7 @@ export function WhyIronair() {
         {/* Comparison Table with Legend */}
         <div className="flex flex-col items-center gap-6 lg:px-20">
           <div className="font-bold text-sm text-[#222222] w-fit px-4 py-2 bg-[#626262]/30 rounded-lg">
-            Iron-Air V/S Other Energy Technologies
+            Iron-Air v/s Other Energy Technologies
           </div>
 
           <div className="flex flex-col-reverse gap-8 justify-center items-center w-full">

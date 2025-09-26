@@ -61,7 +61,7 @@ export function NewsSection() {
               {newsList.map((news, index) => (
                 <div
                   key={index}
-                  className="mx-3 flex-[0_0_90%] sm:flex-[0_0_45%] lg:flex-[0_0_30%] bg-white rounded-2xl overflow-hidden border"
+                  className="mx-3 flex-[0_0_90%] sm:flex-[0_0_45%] lg:flex-[0_0_30%] bg-white rounded-2xl overflow-hidden border flex flex-col"
                 >
                   {news.image && (
                     <div className="relative h-64 w-full">
@@ -69,17 +69,20 @@ export function NewsSection() {
                         src={news.image}
                         alt={news.content}
                         fill
-                        className="object-cover"
+                        className="object-cover origin-top"
                       />
                     </div>
                   )}
-                  <div className="p-4 flex flex-col justify-between">
-                    <div className="text-gray-800 font-medium">{news.content}</div>
+
+                  {/* Card content - flex column with 'Read more' at bottom */}
+                  <div className="p-4 flex flex-col flex-1">
+                    <div className="text-gray-800 font-medium mb-4">{news.content}</div>
+
                     <a
                       href={news.link || '#'}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-3 inline-flex items-center text-meine-electric font-semibold hover:underline"
+                      className="mt-auto inline-flex items-center text-meine-electric font-semibold hover:underline"
                     >
                       Read more <ArrowUpRight className="ml-1 h-4 w-4" />
                     </a>

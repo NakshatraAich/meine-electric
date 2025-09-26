@@ -32,7 +32,7 @@ export function CompanyIntroduction() {
             Together, we are shaping a future where clean power is reliable, accessible, and empowers communities and industries to thrive.
           </p>
           <div className='mt-12 text-xl font-semibold'>
-            Contact Us at <span className='text-meine-electric underline font-bold'>support@meineelectric.com</span>
+            Contact Us at <span className='text-meine-electric underline font-bold'>contact@meineelectric.com</span>
           </div>
         </motion.div>
 

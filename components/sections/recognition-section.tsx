@@ -8,7 +8,7 @@ import AutoScroll from 'embla-carousel-auto-scroll'
 const partners = [
   { name: 'Irena', logo: '/logos/irena.png', sizes: { sm: 120, md: 120, lg: 180 } },
   { name: 'BITS Pilani', logo: '/logos/bits.svg', sizes: { sm: 120, md: 80, lg: 30 } },
-  { name: 'Climate Collective', logo: '/logos/climate.webp', sizes: { sm: 120, md: 80, lg: 100 } },
+  { name: 'Climate Collective', logo: '/logos/climate.png', sizes: { sm: 120, md: 80, lg: 100 } },
   { name: 'Shell', logo: '/logos/shell.png', sizes: { sm: 120, md: 80, lg: 100 } },
   { name: 'Nasscom', logo: '/logos/nasscom.svg', sizes: { sm: 120, md: 120, lg: 180 } },
   { name: 'Baker Hughes', logo: '/logos/baker.png', sizes: { sm: 120, md: 120, lg: 180 } },
