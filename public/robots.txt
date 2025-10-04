@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://meine-electric.vercel.app/sitemap.xml

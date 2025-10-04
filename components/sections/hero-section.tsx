@@ -34,13 +34,13 @@ export function HeroSection() {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl md:text-4xl md:max-w-lg font-bold text-[#222222] mb-6 lg:mb-0"
+            className="text-4xl md:text-[2.7rem]  md:max-w-lg font-bold text-[#222222] mb-6 lg:mb-0 leading-[3.1rem]"
           >
-            Low-Cost Multi-Day Energy Storage with Breakthrough{' '}
-            <span className="text-meine-electric">Iron Air Technology</span>
+            Low-Cost, Multi-Day <br/>Energy Storage with <br/>Breakthrough<br/>
+            <span className="text-meine-electric">Iron Air Batteries</span>
           </motion.h2>
 
-          <div className='lg:block hidden'>
+          <div className='lg:block hidden mt-8'>
             <RecognitionSection />
           </div>
         </motion.div>

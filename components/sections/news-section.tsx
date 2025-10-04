@@ -38,9 +38,6 @@ export function NewsSection() {
         >
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
             <div>
-              <p className="text-white px-4 pb-2 pt-2 w-fit rounded-lg font-semibold bg-meine-electric text-sm tracking-wider text-center mb-4">
-                News & Updates
-              </p>
               <h2 className="text-3xl md:text-4xl font-bold">
                 Latest from Meine Electric
               </h2>

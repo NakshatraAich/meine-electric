@@ -4,6 +4,7 @@
 
 @layer base {
   :root {
+    --white: #F7F0F5;
     --background: 0 0% 100%;
     --foreground: 0 0% 0%;
     --card: 0 0% 100%;
@@ -70,7 +71,7 @@
   }
   
   .section-spacing {
-    @apply py-14 md:py-20 lg:py-24;
+    @apply py-14 md:py-16 lg:py-10;
   }
   
   .tap-target {

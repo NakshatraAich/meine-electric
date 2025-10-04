@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export function CompanyIntroduction() {
   return (
-    <section id='about' className="section-spacing bg-white pt-20 md:pt-24 xl:mx-12">
+    <section id='about' className="container-spacing section-spacing bg-white pt-20 md:pt-24 xl:mx-12">
       <div className="container-padding flex flex-col  gap-12 lg:gap-36 lg:flex-row items-start">
         
         {/* Left Content */}
@@ -16,11 +16,8 @@ export function CompanyIntroduction() {
           transition={{ duration: 0.6 }}
           className="xl:max-w-sm lg:max-w-xl h-full"
         >
-          <p className="text-white px-4 py-2 w-fit rounded-lg font-semibold bg-meine-electric text-sm tracking-wider mb-4">
-            Company
-          </p>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 max-w-sm">
-            About <span className='text-meine-electric'>Meine Electric</span>
+            About Meine Electric
           </h2>
           <p className="max-w-lg text-gray-600 text-base sm:text-lg mb-2 font-semibold">
             We are building energy infrastructure of tomorrow &mdash; innovative, sustainable, and resilient.

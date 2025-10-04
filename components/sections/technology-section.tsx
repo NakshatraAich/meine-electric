@@ -1,13 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { useEffect, useRef } from 'react'
-
-const steps = [
-  { text: "During discharge, iron reacts with oxygen to form rust — a simple, natural reaction that releases stored energy.", top: '0%', left: '0%' },
-  { text: "When recharged, the rust is converted back into pure iron through our proprietary method.", top: '25%', right: '-10%' },
-  { text: "This reversible cycle enables a sustainable, low-cost solution to power widespread future energy systems.", top: '80%', left: '0%' },
-]
 
 export function TechnologySection() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -17,16 +10,15 @@ export function TechnologySection() {
   }, [])
 
   return (
-    <section id="tech" className="container-padding xl:mx-12 pt-20 md:pt-24">
-      <div className="text-center mb-12 flex flex-col items-center">
-        <p className="text-white px-4 pb-2 pt-2 w-fit rounded-lg font-semibold bg-meine-electric text-sm tracking-wider mb-4">
-          Technology
-        </p>
-        <h2 className="text-3xl md:text-4xl font-bold mb-10 lg:max-w-xl">
-          Redefining Wide-Scale<br/> Grid Energy
-        </h2>
-        <div className="relative w-full max-w-5xl">
-          {/* Video */}
+    <section
+      id="tech"
+      className="section-spacing mt-20 container-padding xl:mx-12 pt-20"
+    >
+      {/* Center the flex container horizontally */}
+      <div className="flex flex-col-reverse xl:flex-row gap-20 max-w-7xl">
+        
+        {/* 🎥 Video Left */}
+        <div className="w-full max-w-[40rem] aspect-[4/3]">
           <video
             ref={videoRef}
             src="/cycle.mp4"
@@ -34,46 +26,23 @@ export function TechnologySection() {
             muted
             loop
             playsInline
-            className="w-full h-full object-cover rounded-lg"
+            className="w-full h-full object-cover rounded-lg s"
           />
-
-          <div className="mt-6 flex flex-col space-y-4 xl:hidden">
-            {steps.map((step, index) => (
-              <div key={index} className="flex items-start gap-3">
-                <span className="flex-shrink-0 w-8 h-8 text-sm rounded-full bg-meine-electric text-white flex items-center justify-center font-semibold">
-                  {index + 1}
-                </span>
-                <span className="text-gray-600 text-left text-sm font-semibold leading-relaxed">{step.text}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* Manual bullets */}
-          {steps.map((step, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 1, y: -15 }}
-              whileInView={{ opacity: 1, scale: 1 , y: 0}}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="absolute hidden xl:flex items-start gap-3 max-w-xs"
-              style={{
-                top: step.top,
-                left: step.left,
-                right: step.right,
-              }}
-            >
-              <span className="flex-shrink-0 w-8 h-8 text-sm rounded-full bg-meine-electric text-white flex items-center justify-center font-semibold">
-                {index + 1}
-              </span>
-              <span className="text-gray-600 text-left text-base font-semibold leading-relaxed">{step.text}</span>
-            </motion.div>
-          ))}
         </div>
-        <div className='border-2 border-meine-electric py-8 px-12 rounded-lg border-dashed text-left text-3xl font-semibold items-center flex flex-row gap-2 mt-12 sm:mt-36 max-w-xl'>
-          <div className='text-base sm:text-xl leading-snug '>24 Hours of <span className='text-meine-electric'>Energy Storage</span></div>
-          <div>@</div>
-          <div className='w-2/3 text-gray-600 text-base sm:text-lg text-center bg-meine-electric rounded-lg px-4 py-2'><span className='font-bold text-4xl sm:text-6xl text-white'>$0.08</span><br/>per kwH</div>
+
+        {/* 📝 Text Right */}
+        <div className="w-full xl:w-1/2 lex flex-col items-center xl:items-start text-left mt-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 leading-tight">
+            Our Technology
+          </h2>
+          <div className="space-y-4">
+            <p className="leading-relaxed text-gray-600 text-base sm:text-lg max-w-lg">
+              During discharge, iron reacts with oxygen to form rust — a simple, natural reaction that releases stored energy. When recharged, the rust is converted back into pure iron through our proprietary method. 
+            </p>
+            <p className="leading-relaxed text-gray-600 text-base sm:text-lg max-w-lg">
+              This reversible cycle enables a sustainable, low-cost solution to power widespread future energy systems.
+            </p>
+          </div>
         </div>
       </div>
     </section>
