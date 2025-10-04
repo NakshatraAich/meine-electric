@@ -26,7 +26,7 @@ export function NewsSection() {
   }, [emblaApi, onSelect])
 
   return (
-    <section className="section-spacing bg-white">
+    <section id='news' className="section-spacing bg-white">
       <div className="container-padding">
         {/* Heading */}
         <motion.div

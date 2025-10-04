@@ -63,13 +63,13 @@ export function Header() {
           <button onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
             About
           </button>
-          <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-            Blog
+          <button onClick={() => document.getElementById('news')?.scrollIntoView({ behavior: 'smooth' })}>
+            News
           </button>
         </nav>
 
         {/* Contact Button */}
-        <button className="hidden lg:flex items-center h-[2.25rem] justify-center text-white px-4 py-2 rounded-sm font-semibold bg-meine-electric text-sm tracking-wider leading-none">
+        <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="hidden lg:flex items-center h-[2.25rem] justify-center text-white px-4 py-2 rounded-sm font-semibold bg-meine-electric text-sm tracking-wider leading-none">
           Contact
         </button>
 
@@ -99,6 +99,7 @@ export function Header() {
             <div className="flex flex-col gap-4 px-6 py-8 text-base font-semibold text-[#222222]">
               <button onClick={() => { setMenuOpen(false); document.getElementById('tech')?.scrollIntoView({ behavior: 'smooth' }) }}>Technology</button>
               <button onClick={() => { setMenuOpen(false); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }) }}>About</button>
+              <button onClick={() => { setMenuOpen(false); document.getElementById('news')?.scrollIntoView({ behavior: 'smooth' }) }}>News</button>
               <button onClick={() => { setMenuOpen(false); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) }}>Contact</button>
             </div>
           </motion.div>
