@@ -41,7 +41,7 @@ export function WhyIronair() {
             <img
               src="/images/skid.png"  // Replace with your image path
               alt="Iron-Air Battery Illustration"
-              className="object-cover w-full mb-16 sm:mb-24 md:mb-44 h-auto rounded"
+              className="object-cover w-full lg:w-[60%] mb-16 sm:mb-24 md:mb-44 h-auto rounded"
             />
 
             {/* Bottom-left animated boxes */}
