@@ -12,10 +12,6 @@ export function Table() {
   return (
     <section className="container-padding section-spacing bg-white pt-20 md:pt-24 xl:mx-12">
       <motion.div
-        initial={{ opacity: 0, x: -20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
         className="w-full"
       >
         <h2 className="text-3xl md:text-4xl font-bold mb-4 max-w-md">
