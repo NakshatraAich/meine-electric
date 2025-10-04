@@ -76,16 +76,17 @@ export function Header() {
 
 
         {/* Mobile Hamburger */}
-        <button
+        {/* <button
           className="lg:hidden ml-auto"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <X className="w-6 h-6 text-gray-800" /> : <Menu className="w-6 h-6 text-gray-800" />}
-        </button>
+        </button> */}
+        <div></div>
       </div>
 
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -104,7 +105,7 @@ export function Header() {
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </motion.header>
   )
 }
