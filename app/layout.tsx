@@ -6,7 +6,7 @@ import { Header } from "@/components/layout/header";
 export const metadata: Metadata = {
   title: "Meine Electric | Iron Air Battery Solutions",
   description: "Discover Meine Electric's iron-air battery solutions - a new era of multi-day, low-cost energy storage that helps utilities, industries, and communities transition to clean, reliable renewable power.",
-  keywords: ["Meine Electric", "Iron-Air Battery", "Longterm Energy Storage", ""],
+  keywords: ["Meine Electric", "Iron-Air Battery", "Longterm Energy Storage"],
 };
 
 export const viewport = {

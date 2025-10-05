@@ -30,19 +30,16 @@ export function HeroSection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
-          className="flex flex-col justify-center gap-4 w-full lg:w-2/5 container-padding sm:container-left sm:mt-0 lg:mt-36 mt-10"
+          className="flex flex-col justify-center gap-4 w-full lg:w-2/5 container-padding sm:container-left sm:mt-0 lg:mt- mt-10"
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl md:text-[2.7rem]  md:max-w-lg font-bold text-[#222222] mb-6 lg:mb-0 leading-[3.1rem]"
+            className="text-4xl z-20 sm:whitespace-nowrap -mr-12 md:text-[2.7rem]  md:max-w-lg font-bold text-[#222222] mb-6 lg:mb-0 leading-[3.1rem]"
           >
             Low-Cost, Multi-Day <br/>Energy Storage with <br/>Breakthrough<br/>
             <span className="text-meine-electric">Iron Air Batteries</span>
           </motion.h2>
 
-          <div className='lg:block hidden mt-8'>
-            <RecognitionSection />
-          </div>
         </motion.div>
 
         {/* Right Image */}

@@ -22,12 +22,12 @@ export function WhyIronair() {
           <motion.div className="w-full h-full flex flex-col justify-between">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 max-w-md">Why Iron-Air?</h2>
-              <div className="space-y-2 mb-6">
-                <p className="text-gray-600 text-base sm:text-lg max-w-lg">
-                  Clean energy transition is not limited by renewable generation today, but by how we store and shift energy across time - not just for hours, but for days, weeks, and even seasons. Long Duration Energy Storage (LDES) that is affordable, scalable, and sustainable is the missing link in building a reliable renewable grid.
+              <div className="space-y-2 mb-6 xl:mr-28">
+                <p className="text-gray-600 text-base sm:text-lg max-w-lg font-bold">
+                  Energy storage, not generation, is the real barrier limiting the clean energy transition today.
                 </p>
                 <p className="text-gray-600 text-base sm:text-lg max-w-lg">
-                  Iron-air batteries are the most practical LDES solution: using abundant iron to deliver multi-day storage at the lowest cost per kWh, they solve renewable curtailment and make decarbonizing the grid both feasible and affordable. This breakthrough bridges the gap between renewable supply and continuous demand, ensuring a resilient, fossil-free energy future.
+                  Affordable, scalable, and sustainable Long Duration Energy Storage (LDES) is essential for a reliable renewable grid. Iron-air batteries are the most practical LDES solution: using abundant iron, they provide multi-day storage at the lowest cost per kWh, reduce renewable curtailment, and make decarbonizing the grid achievable. By bridging the gap between intermittent supply and continuous demand, this technology enables a resilient, fossil-free energy future.
                 </p>
               </div>
             </div>

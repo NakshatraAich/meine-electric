@@ -77,7 +77,7 @@ module.exports = {
         "3xl": "2rem",
       },
       fontFamily: {
-        sans: ["'dm-sans'", "system-ui", "-apple-system", "sans-serif"],
+        sans: ["Karla", "system-ui", "-apple-system", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {

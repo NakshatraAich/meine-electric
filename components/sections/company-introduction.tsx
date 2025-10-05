@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { RecognitionSection } from './recognition-section'
 
 export function CompanyIntroduction() {
   return (
@@ -17,9 +18,9 @@ export function CompanyIntroduction() {
           className="xl:max-w-sm lg:max-w-xl h-full"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 max-w-sm">
-            About Meine Electric
+            About Us
           </h2>
-          <p className="max-w-lg text-gray-600 text-base sm:text-lg mb-2 font-semibold">
+          <p className="max-w-lg text-gray-600 text-base sm:text-lg mb-2 font-bold">
             We are building energy infrastructure of tomorrow &mdash; innovative, sustainable, and resilient.
           </p>
           <p className="max-w-lg text-gray-600 text-base sm:text-lg mb-2">
@@ -39,17 +40,8 @@ export function CompanyIntroduction() {
         >
           <div className="flex-1 relative col-span-2 rounded-sm overflow-hidden">
             <Image
-              src="/images/comp1.jpeg"
-              alt="Collage image 1"
-              fill
-              className="object-cover"
-            />
-          </div>
-
-          <div className="flex-1 origin-top relative col-span-1 rounded-sm overflow-hidden">
-            <Image
-              src="/images/comp2.webp"
-              alt="Collage image 2"
+              src="/images/electrochem.jpg"
+              alt="Collage image 4"
               fill
               className="object-cover"
             />
@@ -57,19 +49,30 @@ export function CompanyIntroduction() {
 
           <div className="flex-1 relative col-span-1 rounded-sm overflow-hidden">
             <Image
-              src="/images/comp3.jpeg"
+              src="/images/cell.jpg"
               alt="Collage image 3"
               fill
+              className="object-cover origin-left scale-125"
+              style={{ objectFit: 'cover', objectPosition: '70% 50%' }} 
+            />
+          </div>
+
+          <div className="flex-1 origin-top relative col-span-1 rounded-sm overflow-hidden">
+            <Image
+              src="/images/product.jpg"
+              alt="Collage image 2"
+              fill
               className="object-cover"
+              style={{ objectFit: 'cover', objectPosition: '60% center' }} 
             />
           </div>
 
           <div className="flex-1 relative col-span-2 rounded-sm overflow-hidden">
             <Image
-              src="/images/comp4.jpeg"
-              alt="Collage image 4"
+              src="/images/team.webp"
+              alt="Collage image 1"
               fill
-              className="object-cover"
+              className="object-cover scale-[1.2]"
             />
           </div>
         </div>

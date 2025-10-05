@@ -11,6 +11,10 @@ const partners = [
   { name: 'ARAI', logo: '/logos/arai.png', size: { w: 180, h: 90 } },
   { name: 'SPTBI', logo: '/logos/sptbi.png', size: { w: 160, h: 80 } },
   { name: 'Anna University', logo: '/logos/anna.svg', size: { w: 100, h: 70 } },
+  { name: 'Antler', logo: '/logos/antler.svg', size: { w: 160, h: 70 } },
+  { name: 'Grad Capital', logo: '/logos/grad.png', size: { w: 160, h: 70 } },
+  { name: 'Rebalance', logo: '/logos/rebalance.png', size: { w: 200, h: 90 } },
+  { name: 'Anna University', logo: '/logos/inno.png', size: { w: 160, h: 70 } },
 ]
 
 export function RecognitionSection() {
@@ -34,7 +38,7 @@ export function RecognitionSection() {
             key={partner.name + i}
             className="flex-shrink-0 flex items-center justify-center p-4"
             style={{
-              width: `${partner.size.w + 50}px`, // +padding for spacing between slides
+              width: `${partner.size.w + 80}px`, // +padding for spacing between slides
               height: `${partner.size.h + 40}px`,
             }}
           >
