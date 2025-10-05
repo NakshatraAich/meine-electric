@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
 
 export function TechnologySection() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -31,19 +32,27 @@ export function TechnologySection() {
         </div>
 
         {/* 📝 Text Right */}
-        <div className="w-full xl:w-1/2 lex flex-col items-center xl:items-start text-left mt-4">
+        <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="w-full xl:w-1/2 lex flex-col items-center xl:items-start text-left mt-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-3 leading-tight">
-            Our Technology
+            Our Technology:  From Rust to Reliable Power
           </h2>
           <div className="space-y-4">
             <p className="leading-relaxed text-gray-600 text-base sm:text-lg max-w-lg">
-              During discharge, iron reacts with oxygen to form rust — a simple, natural reaction that releases stored energy. When recharged, the rust is converted back into pure iron through our proprietary method. 
+              At the core of our innovation is the reversible rust battery - a breakthrough iron-air chemistry that turns one of nature's most common reactions into a powerful energy storage solution.
             </p>
             <p className="leading-relaxed text-gray-600 text-base sm:text-lg max-w-lg">
-              This reversible cycle enables a sustainable, low-cost solution to power widespread future energy systems.
+              During discharge, iron reacts with oxygen to form rust, releasing energy. On charging, our proprietary process reverses the rust back to pure iron, completing a clean and repeatable cycle. This cycle can be repeated thousands of times, providing a low-cost, long-duration, and sustainable way to store renewable energy.
+            </p>
+            <p className="leading-relaxed text-gray-600 text-base sm:text-lg max-w-lg">
+              Unlike conventional batteries that rely on rare or expensive materials, our iron-air technology harnesses earth-abundant, safe, and recyclable elements - making it an ideal solution for grid-scale applications.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )

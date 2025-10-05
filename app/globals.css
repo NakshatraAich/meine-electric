@@ -82,3 +82,16 @@
     text-wrap: balance;
   }
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-200px * 7));
+  }
+}
+
+.animate-scroll {
+  animation: scroll 10s linear infinite;
+}

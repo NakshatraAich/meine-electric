@@ -69,7 +69,7 @@ export function Header() {
         </nav>
 
         {/* Contact Button */}
-        <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="hidden lg:flex items-center h-[2.25rem] justify-center text-white px-4 py-2 rounded-sm font-semibold bg-meine-electric text-sm tracking-wider leading-none">
+        <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="hidden lg:flex items-center h-[2.25rem] justify-center text-white px-4 py-2 rounded-sm font-semibold bg-meine-electric text-sm tracking-wider leading-none active:scale-95 transition-all duration-200 ease-in-out">
           Contact
         </button>
 

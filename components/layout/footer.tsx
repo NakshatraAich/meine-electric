@@ -44,7 +44,7 @@ const socialIcons = {
 
 export default function Footer() {
   return (
-    <footer id="contact" className="relative overflow-hidden bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 text-white font-sans">
+    <footer id="contact" className="relative overflow-hidden bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 text-white font-sans mt-16">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5 bg-[url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.1&quot;%3E%3Ccircle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/ %3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
 

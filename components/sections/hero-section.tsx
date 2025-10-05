@@ -30,7 +30,7 @@ export function HeroSection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
-          className="flex flex-col justify-center gap-4 w-full lg:w-2/5 container-padding sm:container-left sm:mt-0 lg:mt-16 mt-10"
+          className="flex flex-col justify-center gap-4 w-full lg:w-2/5 container-padding sm:container-left sm:mt-0 lg:mt-36 mt-10"
         >
           <motion.h2
             variants={itemVariants}
