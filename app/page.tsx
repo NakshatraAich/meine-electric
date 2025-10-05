@@ -8,7 +8,6 @@ import Footer from '@/components/layout/footer'
 import { siteImages } from '@/lib/images-config'
 import { WhyIronair } from '@/components/sections/why-ironair'
 import { Table } from '@/components/sections/table'
-import { EndSection } from '@/components/sections/first-section'
 
 export default function Home() {
   return (
