@@ -69,10 +69,6 @@ export function HeroSection() {
             <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent"></div>
           </div>
         </div>
-
-        <div className='lg:hidden block'>
-          <RecognitionSection />
-        </div>
       </div>
     </section>
   )
