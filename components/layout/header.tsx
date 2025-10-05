@@ -82,7 +82,7 @@ export function Header() {
         >
           {menuOpen ? <X className="w-6 h-6 text-gray-800" /> : <Menu className="w-6 h-6 text-gray-800" />}
         </button> */}
-        <div></div>
+        <div className='sm:hidden'></div>
       </div>
 
 

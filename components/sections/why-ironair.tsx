@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import React from 'react'
-import { DollarSign, Zap, Expand, HardHat } from 'lucide-react' 
+import { DollarSign, Zap, Expand, HardHat } from 'lucide-react'
 
 export function WhyIronair() {
   const boxIcons = [
@@ -19,9 +19,7 @@ export function WhyIronair() {
         <div className="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-4">
           
           {/* Left Content */}
-          <motion.div
-            className="w-full h-full flex flex-col justify-between"
-          >
+          <motion.div className="w-full h-full flex flex-col justify-between">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 max-w-md">Why Iron-Air?</h2>
               <div className="space-y-2 mb-6">
@@ -35,9 +33,11 @@ export function WhyIronair() {
             </div>
           </motion.div>
 
-          {/* Right Content (Image + Boxes) */}
-          <div className="w-full lg:w-[108rem] h-full relative flex flex-col justify-between">
-            <div className="flex-1 flex items-center justify-center">
+          {/* Right Content: Image + Boxes stacked vertically */}
+          <div className="w-full lg:w-[108rem] h-full flex flex-col justify-start items-center gap-10">
+            
+            {/* 📸 Image on top */}
+            <div className="flex items-center justify-center w-full">
               <img
                 src="/images/skid.png"
                 alt="Iron-Air Battery Illustration"
@@ -45,10 +45,9 @@ export function WhyIronair() {
               />
             </div>
 
-            {/* Bottom-left animated boxes */}
+            {/* 📦 Boxes below as row */}
             <motion.div
-              className="flex flex-wrap w-full justify-center gap-10 mt-10
-                         relative sm:absolute sm:bottom-4 sm:left-0"
+              className="flex flex-wrap justify-center items-stretch gap-6 w-full"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
@@ -61,23 +60,22 @@ export function WhyIronair() {
                 return (
                   <motion.div
                     key={idx}
-                    className="aspect-square w-28 sm:w-32 md:w-28 lg:w-32 flex flex-col items-center
-                               border-0 bg-gradient-to-br from-meine-electric via-meine-electric/80 to-meine-electric/60 p-2
-                               rounded justify-between shadow-lg backdrop-blur-sm"
+                    className="flex flex-col justify-between items-start w-32 sm:w-36 md:w-40 p-3 
+                               bg-gradient-to-br from-meine-electric via-meine-electric/80 to-meine-electric/60 
+                               rounded shadow-lg backdrop-blur-sm aspect-square"
                     variants={{
                       hidden: { opacity: 0, y: 20 },
                       visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
                     }}
                   >
                     <div className="flex flex-row justify-between items-start w-full">
-                      <div className="rounded-full bg-white text-xs font-bold text-meine-electric w-4 h-4 flex items-center justify-center">
-                        <div>{idx + 1}</div>
+                      <div className="rounded-full bg-white text-xs font-bold text-meine-electric w-5 h-5 flex items-center justify-center">
+                        {idx + 1}
                       </div>
-
-                      <Icon className="aspect-square text-white" size={44} strokeWidth={2} />
+                      <Icon className="text-white" size={44} strokeWidth={2} />
                     </div>
 
-                    <div className="text-left text-xs sm:text-xs md:text-xs font-medium text-[#064919] leading-snug">
+                    <div className="text-left text-xs sm:text-sm font-medium text-[#064919] leading-snug mt-3">
                       {item.text}
                     </div>
                   </motion.div>
