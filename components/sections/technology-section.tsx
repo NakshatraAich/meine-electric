@@ -43,7 +43,7 @@ export function TechnologySection() {
           </h2>
           <div className="space-y-4">
             <p className="leading-relaxed text-gray-600 text-base sm:text-lg max-w-lg">
-              At the core of our innovation is the reversible rust battery - a breakthrough iron-air chemistry that turns one of nature's most common reactions into a powerful energy storage solution.
+              At the core of our innovation is the reversible rust battery - a breakthrough iron-air chemistry that turns one of nature&apos;s most common reactions into a powerful energy storage solution.
             </p>
             <p className="leading-relaxed text-gray-600 text-base sm:text-lg max-w-lg">
               During discharge, iron reacts with oxygen to form rust, releasing energy. On charging, our proprietary process reverses the rust back to pure iron, completing a clean and repeatable cycle. This cycle can be repeated thousands of times, providing a low-cost, long-duration, and sustainable way to store renewable energy.
