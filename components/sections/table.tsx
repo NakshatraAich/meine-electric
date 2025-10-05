@@ -47,7 +47,7 @@ export function Table() {
             <tbody>
               {/* LCOS Row */}
               <tr>
-                <td className="py-[3rem] text-lg font-bold text-center whitespace-nowrap">
+                <td className="py-[3rem] p-2 text-lg font-bold text-center whitespace-nowrap">
                   LCOS ($/kWh)
                 </td>
                 <td className="py-1 font-semibold text-white border-l border-gray-300">
